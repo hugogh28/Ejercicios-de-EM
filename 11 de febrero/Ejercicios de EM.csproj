@@ -46,14 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ejercicio1.cs" />
-    <Compile Include="Ejercicio2.cs" />
-    <Compile Include="Ejercicio3.cs" />
-    <Compile Include="Ejercicio4.cs" />
-    <Compile Include="Ejercicio5.cs" />
-    <Compile Include="Ejercicio6.cs" />
-    <Compile Include="Ejercicio7.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Tema 2.2\Ejercicio1.cs" />
+    <Compile Include="Tema 2.2\Ejercicio2.cs" />
+    <Compile Include="Tema 2.2\Ejercicio3.cs" />
+    <Compile Include="Tema 2.2\Ejercicio4.cs" />
+    <Compile Include="Tema 2.2\Ejercicio5.cs" />
+    <Compile Include="Tema 2.2\Ejercicio6.cs" />
+    <Compile Include="Tema 2.2\Ejercicio7.cs" />
+    <Compile Include="Tema 2.2\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
