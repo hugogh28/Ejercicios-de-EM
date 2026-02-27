@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicios_de_EM.Tema_2._2
 {
-    internal class Ejercicio14
+    public class Ejercicio14
     {
         const int N_Hilos = 10;
         

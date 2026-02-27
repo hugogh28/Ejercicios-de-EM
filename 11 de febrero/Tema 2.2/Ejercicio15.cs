@@ -11,7 +11,7 @@ namespace Ejercicios_de_EM.Tema_2._2
 
     /////////////////////// SUJETO A REVISIÓN, MIRA EL VÍDEO DE JULIO /////////////////////// 
 
-    internal class Ejercicio15
+    public class Ejercicio15
     {
         const int N_Hilos = 4;
 
