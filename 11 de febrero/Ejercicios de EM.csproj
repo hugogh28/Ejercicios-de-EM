@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>_11_de_febrero.Ejercicio1_Tema4_1</StartupObject>
+    <StartupObject>Ejercicios_de_EM.Tema_4._1.Ejercicio2_Tema4_2</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,7 +61,8 @@
     <Compile Include="Tema 2.3\Ejercicio21.cs" />
     <Compile Include="Tema 2.3\Ejercicio20.cs" />
     <Compile Include="Tema 2.3\Ejercicio22.cs" />
-    <Compile Include="Tema 4.1\Ejercicio1_Tema4_1.cs" />
+    <Compile Include="Tema 4\Ejercicio1_Tema4_1.cs" />
+    <Compile Include="Tema 4\Ejercicio2_Tema4_2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

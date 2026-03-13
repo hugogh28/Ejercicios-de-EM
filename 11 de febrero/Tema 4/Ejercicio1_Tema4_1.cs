@@ -8,31 +8,26 @@ namespace _11_de_febrero
 {
     public class Ejercicio1_Tema4_1
     {
-        static Random random = new Random();
-        static volatile bool producido = false;
-        static volatile int producto = 0;
+        SemaphoreSlim sinc = new SemaphoreSlim(0); //Al no ser static depende de cada objeto al que este asociado, por lo que si añadimos dos objetos de tipo Ejercicio1_Tema4_1 que ejecuten cada uno Exec(), quiere decir que el semaforo no sera igual para los dos, cosa que para static, si que lo es por donde se almacena en memoria
+        Random random = new Random();
+         volatile int producto = 0;
 
          void Productor()
         {
             producto = random.Next(10);
             //Genera un núumero aleatorio
             Console.WriteLine("Productor: " + producto);
-            producido = true;
+            sinc.Release();
         }
          void Consumidor()
         {
-            //Muestra el numero aleatorio
-            while (!producido)
-            {
-                Console.WriteLine("Esperando");
-            }
-            ;
-            Console.WriteLine("*******Consumidor*******: " + producto);
+            sinc.Wait();
+            Console.WriteLine("Producto: {0}", producto);
         }
 
         public void Exec()
         {
-            //Declaración de un hilo con Action y con Invoke
+            /*//Declaración de un hilo con Action y con Invoke
 
             Action met_productor = Productor;
             //ThreadStart hilo = Productor;
@@ -43,7 +38,10 @@ namespace _11_de_febrero
             prod.Start();
 
             Thread cons = new Thread(() => Consumidor());
-            cons.Start();
+            cons.Start();*/
+
+            new Thread(Productor).Start();
+            new Thread(Consumidor).Start();
         }
 
         public static void Main(String[] args)
