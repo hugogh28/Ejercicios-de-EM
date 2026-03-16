@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Ejercicios_de_EM.Tema_4._1.Ejercicio2_Tema4_2</StartupObject>
+    <StartupObject>_11_de_febrero.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
