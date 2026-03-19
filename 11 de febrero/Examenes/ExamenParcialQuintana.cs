@@ -13,9 +13,7 @@ namespace _11_de_febrero
         public static void SleepRandom(int millis)
 
         {
-
             Thread.Sleep(Rand.Next(0, millis));
-
         }
 
     }
@@ -106,7 +104,6 @@ namespace _11_de_febrero
                     Console.WriteLine("\t\t\tInstructor: NO PUEDO CREAR EXPLORADORES, NO HAY SUFICIENTES ESPECIAS");
                     almacenMutex.ReleaseMutex();
                     //Thread.Sleep(100);
-
                 }
 
             }
