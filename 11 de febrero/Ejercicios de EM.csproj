@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Examenes\ExamenParcialMostoles.cs" />
+    <Compile Include="Examenes\ExamenParcialQuintana.cs" />
     <Compile Include="Tema 2.2\Ejercicio1.cs" />
     <Compile Include="Tema 2.2\Ejercicio14.cs" />
     <Compile Include="Tema 2.2\Ejercicio15.cs" />
