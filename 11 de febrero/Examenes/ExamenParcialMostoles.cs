@@ -11,8 +11,6 @@ namespace _11_de_febrero
         const int N_COCHES = 10;
         const int M = 3;
         const int vueltas = 12;
-        static volatile int terminado = 0;
-        static volatile int total = N_COCHES;
         static volatile List<string> clasificacion = new List<string>();
         static Random random = new Random();
         static Mutex mutex = new Mutex();
