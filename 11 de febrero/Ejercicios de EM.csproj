@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>_11_de_febrero.Program</StartupObject>
+    <StartupObject>_11_de_febrero.Dune</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
