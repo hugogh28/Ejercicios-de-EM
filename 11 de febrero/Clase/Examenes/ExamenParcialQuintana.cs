@@ -34,7 +34,7 @@ namespace _11_de_febrero
         //PARTE 1
 
         static SemaphoreSlim martillosDisponibles = new SemaphoreSlim(NUM_MARTILLO); //Definimos un semaforo para seguir la restricción del número de martillos disponibles
-        static SemaphoreSlim esperarRecolectores = new SemaphoreSlim(0); //Definimos un semáforo para seguir la restricción que obliga al programa a esperar a todos los recolectores antes de iniciar un nuevo ciclo
+        static SemaphoreSlim esperarRecolectores = new SemaphoreSlim(NUM_GRANJAS); //Definimos un semáforo para seguir la restricción que obliga al programa a esperar a todos los recolectores antes de iniciar un nuevo ciclo
         static SemaphoreSlim barreraCiclo = new SemaphoreSlim(0); //Definimos un semáforo para bloquear al Main hasta que los Recolectores terminen
         
         static Mutex almacenMutex = new Mutex(); //Definimos un mutex para evitar sobrescribir/leer incorrectamente la variable global ALMACEN
