@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -131,6 +131,7 @@ namespace _11_de_febrero
                 Console.WriteLine("NUEVO CICLO");
                 for (int i = 0; i < NUM_GRANJAS; i++)
                 {
+                    esperarRecolectores.Wait();
                     Thread granja = new Thread(Recolector);
                     granja.Start(i);
                 }
