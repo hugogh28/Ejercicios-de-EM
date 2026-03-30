@@ -35,7 +35,8 @@ namespace _11_de_febrero
 
         static SemaphoreSlim martillosDisponibles = new SemaphoreSlim(NUM_MARTILLO); //Definimos un semaforo para seguir la restricción del número de martillos disponibles
         static SemaphoreSlim esperarRecolectores = new SemaphoreSlim(0); //Definimos un semáforo para seguir la restricción que obliga al programa a esperar a todos los recolectores antes de iniciar un nuevo ciclo
-
+        static SemaphoreSlim barreraCiclo = new SemaphoreSlim(0); //Definimos un semáforo para bloquear al Main hasta que los Recolectores terminen
+        
         static Mutex almacenMutex = new Mutex(); //Definimos un mutex para evitar sobrescribir/leer incorrectamente la variable global ALMACEN
 
         static volatile int ALMACEN = 0;
@@ -63,6 +64,12 @@ namespace _11_de_febrero
 
             //Indicamos que el recolector ha acabado a través del semáforo de fin de ciclo: esperarRecolectores
             esperarRecolectores.Release();
+
+            if(esperarRecolectores.CurrentCount() == NUM_GRANJAS)
+            {
+                //Si y solo si el último explorador ha finalizado, se podrá finalizar el ciclo
+                barreraCiclo.Release();
+            }
         }
 
         //PARTE 2
@@ -129,10 +136,7 @@ namespace _11_de_febrero
                 }
 
                 //Detenemos la ejecución de Main hasta que todos los recolectores hayan acabado
-                for (int i = 0; i < NUM_GRANJAS; i++)
-                {
-                    esperarRecolectores.Wait();
-                }
+                barreraCiclo.Wait();
 
                 //Se procesan e indican las especias del almacen, y se espera un tiempo aleatorio entre un ciclo y el siguiente
                 Console.WriteLine("EL ALMACEN CONTIENE:");
