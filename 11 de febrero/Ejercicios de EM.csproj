@@ -58,6 +58,7 @@
     <Compile Include="Clase\Tema 2.2\Ejercicio6.cs" />
     <Compile Include="Clase\Tema 2.2\Ejercicio7.cs" />
     <Compile Include="Clase\Tema 2.2\Program.cs" />
+    <Compile Include="Clase\Tema 4\Ejercicio13_Tema_4_4.cs" />
     <Compile Include="Clase\Tema 4\Ejercicio14_Tema_4_5.cs" />
     <Compile Include="Clase\Tema 4\Ejercicio8_Tema_4_3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
