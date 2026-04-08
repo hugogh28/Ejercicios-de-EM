@@ -92,7 +92,7 @@ namespace _11_de_febrero
 
             correr.Release(N_COCHES);
 
-            for (int i = 0; i < N_COCHES; i++)
+            for (int i = 0; i < N_COCHES; i++) //ESTO ESTÁ MAL
             {
                 finalizar.Wait();
             }

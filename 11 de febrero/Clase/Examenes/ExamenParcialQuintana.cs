@@ -65,7 +65,7 @@ namespace _11_de_febrero
             //Indicamos que el recolector ha acabado a través del semáforo de fin de ciclo: esperarRecolectores
             esperarRecolectores.Release();
 
-            if(esperarRecolectores.CurrentCount() == NUM_GRANJAS)
+            if(esperarRecolectores.CurrentCount == NUM_GRANJAS)
             {
                 //Si y solo si el último explorador ha finalizado, se podrá finalizar el ciclo
                 barreraCiclo.Release();
