@@ -51,6 +51,7 @@
     <Compile Include="Clase\Tema 2.2\Ejercicio1.cs" />
     <Compile Include="Clase\Tema 2.2\Ejercicio14.cs" />
     <Compile Include="Clase\Tema 2.2\Ejercicio15.cs" />
+    <Compile Include="Clase\Tema 2.2\Ejercicio17.cs" />
     <Compile Include="Clase\Tema 2.2\Ejercicio2.cs" />
     <Compile Include="Clase\Tema 2.2\Ejercicio3.cs" />
     <Compile Include="Clase\Tema 2.2\Ejercicio4.cs" />
